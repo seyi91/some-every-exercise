@@ -40,7 +40,7 @@ Examples:
 */
 
 function hasOnlyOddNumbers(arr) {
-    return arr.some(function(val){
+    return arr.every(function(val){
         return val % 2 !== 0;
     })
 };
