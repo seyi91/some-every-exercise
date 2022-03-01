@@ -24,9 +24,9 @@ Examples:
 */
 
 function hasAZero(num) {
-    let numStr = num.toString().split('')
+    let numStr = num.toString().split('');
     return numStr.some(function(val){
-        return val % 2 !== 0;
+        return val === '0';
     })
 }
 
@@ -84,7 +84,8 @@ function hasCertainKey(arr, key) {
 }
 
 /*
-Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.
+Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if 
+every single object in the array contains that value for the specific key. Otherwise it should return false.
 
 Examples:
     var arr = [
@@ -99,4 +100,8 @@ Examples:
     
 */
 
-function hasCertainValue(arr, key, searchValue) {}
+function hasCertainValue(arr, key, searchValue) {
+    return arr.every(function(obj){
+        return obj[key] === searchValue;
+    })
+}
